@@ -26,6 +26,11 @@
 #define QUAD_TOP_RM_PORT 1      // one plug from the right encoder - either one
 #define QUAD_BOTTOM_RM_PORT 2   // the other plug from the right encoder
 
+// ---------------- Sensors --------------------------------------
+// #define LIMSWITCH_PORT
+// #define POT_PORT
+
+
 // ----------- Is DEBUGGING ON ---------------------------------------
 #define DEBUG_ON true
 #define VEXNET_MANUAL true        // turns opcontrol into allowing for
