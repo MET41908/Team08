@@ -24,6 +24,37 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
+            "bin/init.c.o",
+            "src\\init.c"
+        ],
+        "directory": "C:\\Users\\pringlec\\Documents\\GitHub\\cortex-MET419master",
+        "file": "src\\init.c"
+    },
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-target",
+            "armv7ar-none-none-eabi",
+            "-fno-ms-extensions",
+            "-fno-ms-compatibility",
+            "-fno-delayed-template-parsing",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
+            "-isystem./include",
+            "-iquote./include/./",
+            "-mthumb",
+            "-mcpu=cortex-m3",
+            "-mlittle-endian",
+            "-Os",
+            "-ffunction-sections",
+            "-fsigned-char",
+            "-fomit-frame-pointer",
+            "-fsingle-precision-constant",
+            "-fdiagnostics-color",
+            "-std=gnu99",
+            "-o",
             "bin/manipulator.c.o",
             "src\\manipulator.c"
         ],
@@ -86,11 +117,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/shooter.c.o",
-            "src\\shooter.c"
+            "bin/lift.c.o",
+            "src\\lift.c"
         ],
         "directory": "C:\\Users\\pringlec\\Documents\\GitHub\\cortex-MET419master",
-        "file": "src\\shooter.c"
+        "file": "src\\lift.c"
     },
     {
         "arguments": [
@@ -117,11 +148,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/intake.c.o",
-            "src\\intake.c"
+            "bin/shooter.c.o",
+            "src\\shooter.c"
         ],
         "directory": "C:\\Users\\pringlec\\Documents\\GitHub\\cortex-MET419master",
-        "file": "src\\intake.c"
+        "file": "src\\shooter.c"
     },
     {
         "arguments": [
@@ -179,73 +210,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/lift.c.o",
-            "src\\lift.c"
+            "bin/intake.c.o",
+            "src\\intake.c"
         ],
         "directory": "C:\\Users\\pringlec\\Documents\\GitHub\\cortex-MET419master",
-        "file": "src\\lift.c"
-    },
-    {
-        "arguments": [
-            "clang++",
-            "-c",
-            "-target",
-            "armv7ar-none-none-eabi",
-            "-fno-ms-extensions",
-            "-fno-ms-compatibility",
-            "-fno-delayed-template-parsing",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
-            "-isystem./include",
-            "-iquote./include/./",
-            "-mthumb",
-            "-mcpu=cortex-m3",
-            "-mlittle-endian",
-            "-Os",
-            "-ffunction-sections",
-            "-fsigned-char",
-            "-fomit-frame-pointer",
-            "-fsingle-precision-constant",
-            "-fdiagnostics-color",
-            "-std=gnu99",
-            "-o",
-            "bin/init.c.o",
-            "src\\init.c"
-        ],
-        "directory": "C:\\Users\\pringlec\\Documents\\GitHub\\cortex-MET419master",
-        "file": "src\\init.c"
-    },
-    {
-        "arguments": [
-            "clang++",
-            "-c",
-            "-target",
-            "armv7ar-none-none-eabi",
-            "-fno-ms-extensions",
-            "-fno-ms-compatibility",
-            "-fno-delayed-template-parsing",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
-            "-isystem./include",
-            "-iquote./include/./",
-            "-mthumb",
-            "-mcpu=cortex-m3",
-            "-mlittle-endian",
-            "-Os",
-            "-ffunction-sections",
-            "-fsigned-char",
-            "-fomit-frame-pointer",
-            "-fsingle-precision-constant",
-            "-fdiagnostics-color",
-            "-std=gnu99",
-            "-o",
-            "bin/autoroutines.c.o",
-            "src\\autoroutines.c"
-        ],
-        "directory": "C:\\Users\\pringlec\\Documents\\GitHub\\cortex-MET419master",
-        "file": "src\\autoroutines.c"
+        "file": "src\\intake.c"
     },
     {
         "arguments": [
@@ -277,5 +246,36 @@
         ],
         "directory": "C:\\Users\\pringlec\\Documents\\GitHub\\cortex-MET419master",
         "file": "src\\opcontrol.c"
+    },
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-target",
+            "armv7ar-none-none-eabi",
+            "-fno-ms-extensions",
+            "-fno-ms-compatibility",
+            "-fno-delayed-template-parsing",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
+            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
+            "-isystem./include",
+            "-iquote./include/./",
+            "-mthumb",
+            "-mcpu=cortex-m3",
+            "-mlittle-endian",
+            "-Os",
+            "-ffunction-sections",
+            "-fsigned-char",
+            "-fomit-frame-pointer",
+            "-fsingle-precision-constant",
+            "-fdiagnostics-color",
+            "-std=gnu99",
+            "-o",
+            "bin/autoroutines.c.o",
+            "src\\autoroutines.c"
+        ],
+        "directory": "C:\\Users\\pringlec\\Documents\\GitHub\\cortex-MET419master",
+        "file": "src\\autoroutines.c"
     }
 ]

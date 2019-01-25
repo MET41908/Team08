@@ -7,16 +7,16 @@
 
 void driveRobot(int speed) {
   // This function drives the robot forward/backwards at given speed
-  motorSet(LEFT_M_FRONT, speed);
-  motorSet(RIGHT_M_FRONT, -speed);  // Right motor is mirrored does needs to run reverse
+  motorSet(LEFT_M_FRONT, -speed);
+  motorSet(RIGHT_M_FRONT, speed);  // Right motor is mirrored does needs to run reverse
 
 }
 
 void chassisSetOpcontrol(int left, int right) {
   // requires input for the left motor and right motor, typical from thei
   // the joystick
-  motorSet(LEFT_M_FRONT, -left);
-  motorSet(RIGHT_M_FRONT, right);
+  motorSet(LEFT_M_FRONT, left);
+  motorSet(RIGHT_M_FRONT, -right);
 }
 
 void chassisStopDrive(){
