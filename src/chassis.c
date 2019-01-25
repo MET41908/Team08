@@ -7,8 +7,8 @@
 
 void driveRobot(int speed) {
   // This function drives the robot forward/backwards at given speed
-  motorSet(LEFT_M_FRONT, -speed);
-  motorSet(RIGHT_M_FRONT, speed);  // Right motor is mirrored does needs to run reverse
+  motorSet(LEFT_M_FRONT, speed);
+  motorSet(RIGHT_M_FRONT, -speed);  // Right motor is mirrored does needs to run reverse
 
 }
 
@@ -124,8 +124,8 @@ void driveForDistancePID(int distance, int speed) {
   while(abs(totalTicks) < motorDegree)
   {
     //Set the motor powers to their respective variables.
-    motorSet(LEFT_M_FRONT, masterPower);
-    motorSet(RIGHT_M_FRONT, -slavePower);
+    motorSet(LEFT_M_FRONT, -masterPower);
+    motorSet(RIGHT_M_FRONT, slavePower);
 
     delay(300);                     // control loop needs enough time to gather
                                     // data to base corrections on, to fast no effect,
