@@ -36,9 +36,9 @@ void autonomous() {
      case 0:
        drivePID(60);      //will run forever until powered off
      case 1:
-       driveForDistancePID(36, 60);     // for 36" at speed 60
-       pivotTurn(0, 30, 90);            // turn at seed 30 for 90 degree angle right turn
-       driveForDistancePID(12, 50);     // After turn drive a bit more forward
+       driveForDistancePID(394, 60);     // for 36" at speed 60
+       //pivotTurn(0, 30, 90);            // turn at seed 30 for 90 degree angle right turn
+       //driveForDistancePID(12, 50);     // After turn drive a bit more forward
      break;
 
      case 2:
