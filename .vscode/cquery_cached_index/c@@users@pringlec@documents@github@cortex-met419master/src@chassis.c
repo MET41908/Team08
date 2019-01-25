@@ -7,8 +7,8 @@
 
 void driveRobot(int speed) {
   // This function drives the robot forward/backwards at given speed
-  motorSet(LEFT_M_FRONT, speed);
-  motorSet(RIGHT_M_FRONT, -speed);  // Right motor is mirrored does needs to run reverse
+  motorSet(LEFT_M_FRONT, -speed);
+  motorSet(RIGHT_M_FRONT, speed);  // Right motor is mirrored does needs to run reverse
 
 }
 
