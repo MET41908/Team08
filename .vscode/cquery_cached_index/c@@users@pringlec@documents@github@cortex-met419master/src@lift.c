@@ -7,5 +7,5 @@
 
 void liftMove(int speed){
   // move a lift arm up and down based o nthe given speed
-  motorSet(LIFT_MOTOR, speed);
+  motorSet(LIFT_MOTOR, -speed);
 }
