@@ -15,8 +15,8 @@ void driveRobot(int speed) {
 void chassisSetOpcontrol(int left, int right) {
   // requires input for the left motor and right motor, typical from thei
   // the joystick
-  motorSet(LEFT_M_FRONT, left);
-  motorSet(RIGHT_M_FRONT, -right);
+  motorSet(LEFT_M_FRONT, -left);
+  motorSet(RIGHT_M_FRONT, right);
 }
 
 void chassisStopDrive(){
@@ -28,15 +28,15 @@ void chassisStopDrive(){
 void turnLeft(int speed) {
   // pivot turn the robot 'left' - use delay after the call to
   // turn for a given time = angle
-  motorSet(LEFT_M_FRONT, speed);
-  motorSet(RIGHT_M_FRONT, speed);
+  motorSet(LEFT_M_FRONT, -speed);
+  motorSet(RIGHT_M_FRONT, -speed);
 }
 
 void turnRight(int speed) {
   // pivot turn the robot 'right' - use delay after the call to
   // turn for a given time = angle
-  motorSet(LEFT_M_FRONT, -speed);
-  motorSet(RIGHT_M_FRONT, -speed);
+  motorSet(LEFT_M_FRONT, speed);
+  motorSet(RIGHT_M_FRONT, speed);
 }
 
 void drivePID(int masterPower) {
@@ -63,8 +63,8 @@ void drivePID(int masterPower) {
     while(true)
     {
       //Set the motor powers to their respective variables.
-      motorSet(LEFT_M_FRONT, masterPower);
-      motorSet(RIGHT_M_FRONT, -slavePower);
+      motorSet(LEFT_M_FRONT, -masterPower);
+      motorSet(RIGHT_M_FRONT, slavePower);
 
       delay(300);                     // control loop needs enough time to gather
                                       // data to base corrections on, to fast no effect,
@@ -124,8 +124,8 @@ void driveForDistancePID(int distance, int speed) {
   while(abs(totalTicks) < motorDegree)
   {
     //Set the motor powers to their respective variables.
-    motorSet(LEFT_M_FRONT, -masterPower);
-    motorSet(RIGHT_M_FRONT, slavePower);
+    motorSet(LEFT_M_FRONT, masterPower);
+    motorSet(RIGHT_M_FRONT, -slavePower);
 
     delay(300);                     // control loop needs enough time to gather
                                     // data to base corrections on, to fast no effect,
@@ -202,8 +202,8 @@ void pivotTurn(int direction, int speed, float angle) {
       if(DEBUG_ON){
         printf("encoderLM: %d \n", encoderGet(encoderLM));
       }
-      motorSet(LEFT_M_FRONT, speed);
-      motorSet(RIGHT_M_FRONT, speed);
+      motorSet(LEFT_M_FRONT, -speed);
+      motorSet(RIGHT_M_FRONT, -speed);
 
       delay(10);                 // we need to give it a bit of time to settle, but
                                  // if we make thsi time to long we will overshoot!
@@ -218,8 +218,8 @@ void pivotTurn(int direction, int speed, float angle) {
       if(DEBUG_ON){
         printf("encoderRM: %d \n", encoderGet(encoderRM));
       }
-      motorSet(LEFT_M_FRONT, -speed);
-      motorSet(RIGHT_M_FRONT, -speed);
+      motorSet(LEFT_M_FRONT, speed);
+      motorSet(RIGHT_M_FRONT, speed);
 
       delay(10);                 // we need to give it a bit of time to settle, but
                                  // if we make thsi time to long we will overshoot!
