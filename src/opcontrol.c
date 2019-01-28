@@ -85,10 +85,13 @@ void operatorControl() {
     // If in debug mode print to the console the control values of the driving
     // control (joystick and encoder data)
     if(DEBUG_ON) {
-  		printf("Left Enc: %d", encoderGet(encoderLM));
-	  	printf(" Right Enc: %d ", encoderGet(encoderRM));
-      printf(" Left Joy: %d ", left);
-      printf(" Right Joy: %d \n", right);
+  		//printf("Left Enc: %d", encoderGet(encoderLM));
+	  	//printf(" Right Enc: %d ", encoderGet(encoderRM));
+      //printf(" Left Joy: %d ", left);
+      //printf(" Right Joy: %d \n", right);
+      //printf("Limit Switch: ");
+      //if(digitalRead(LIMSWITCH_PORT) == LOW) { printf(" LOW \n"); }
+      //if(digitalRead(LIMSWITCH_PORT) == HIGH) { printf( "HIGH \n"); }
     }
 
     // The following buttons sequence controls the left going up-and Down
@@ -114,6 +117,14 @@ void operatorControl() {
        moveClaw(0);           // no buttons are pressed, stop the lift
     }
 
+    // Lift Calibration Function
+    if(joystickGetDigital(1, 7, JOY_UP)) {
+       liftCalibrate(30);         // pressing up, so lift should go up
+    }
+    // lift Anglre Move test
+    if(joystickGetDigital(1, 7, JOY_DOWN)) {
+       liftMoveAngle(30, 0);         // pressing up, so lift should go up
+    }
 		delay(20);     // We need the electronics time to react to the processor commands
 	}
 }

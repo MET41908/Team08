@@ -27,8 +27,8 @@
 #define QUAD_BOTTOM_RM_PORT 2   // the other plug from the right encoder
 
 // ---------------- Sensors --------------------------------------
-// #define LIMSWITCH_PORT
-// #define POT_PORT
+#define LIMSWITCH_PORT 5      // digital input port
+#define POT_PORT 1            // analog input port
 
 
 // ----------- Is DEBUGGING ON ---------------------------------------
