@@ -5,7 +5,7 @@
 //
 
 #define WHEEL_DIAMETER 4.06      // diameter of drive wheels
-#define WHEEL_BASE 18         // wheel base in inches left to right wheel diagonal measured
+#define WHEEL_BASE 13.25         // wheel base in inches left to right wheel diagonal measured
                               // of chassis.
 
 #define ARCADE_DRIVE false    // when false it runs tank mode, if true
