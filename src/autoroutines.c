@@ -15,7 +15,9 @@ void compAutoRedRight(){
   // All the veraious autonomous commands for the Competition, Red Sqaure
   // Right position go here.  THen this function is called in auto.c the autonomous()
   // function based on some selector input.
-
+  driveForDistancePID(30, 60);     // for 10 meter = 394" at speed 60
+  pivotTurn(0, 30, 90);            // turn at seed 30 for 90 degree angle right turn
+  driveForDistancePID(12, 50);     // After turn drive a bit more forward
 }
 
 void testAutoDrive(){

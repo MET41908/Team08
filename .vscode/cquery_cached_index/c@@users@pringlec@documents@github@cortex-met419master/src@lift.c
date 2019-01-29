@@ -15,19 +15,29 @@ void liftMoveAngle(int speed, int angle){
   // get current potetniometer value
   int current_position = 0;
   current_position = analogRead(POT_PORT);
+  if(DEBUG_ON){
+    printf("Current Pot Value: %d ", current_position);
+    printf(" Requested: %d \n", angle);
+  }
   if(current_position > angle) {
     // we meed to move Down
-    motorSet(LIFT_MOTOR, -speed);
-    while(analogRead(POT_PORT) <= angle && digitalRead(LIMSWITCH_PORT) == HIGH) {
-      motorSet(LIFT_MOTOR, -speed)
+    if(DEBUG_ON) {
+      printf("Current Pos > Angle routine \n");
+    }
+    motorSet(LIFT_MOTOR, speed);
+    while(analogRead(POT_PORT) >= angle && digitalRead(LIMSWITCH_PORT) == HIGH) {
+      motorSet(LIFT_MOTOR, speed);
       delay(2);
     }
     motorSet(LIFT_MOTOR, 0 );       // reached our position we stop
   } else if( current_position < angle) {
      // we need to move up
-     motorSet(LIFT_MOTOR, speed);
-     while(analogRead(POT_PORT) >= angle && (analogRead(POT_PORT) <= 4000) {
-       motorSet(LIFT_MOTOR, speed)
+     if(DEBUG_ON) {
+       printf("Current Pos < Angle routine \n");
+     }
+     motorSet(LIFT_MOTOR, -speed);
+     while(analogRead(POT_PORT) <= angle && analogRead(POT_PORT) <= 4000) {
+       motorSet(LIFT_MOTOR, -speed);
        delay(2);
      }
      motorSet(LIFT_MOTOR, 0 );       // reached our position we stop
