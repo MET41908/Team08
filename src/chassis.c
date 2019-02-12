@@ -116,7 +116,7 @@ void driveForDistancePID(int distance, int speed) {
   int totalTicks = 0;               // track total trveled
   int slavePower = speed - 5;
   int error = 0;
-  int kp = 10;                       // can be tuned to help zig-zag and accuracy, be careful!
+  int kp = 5;                       // can be tuned to help zig-zag and accuracy, be careful!
 
   encoderReset(encoderLM);
   encoderReset(encoderRM);

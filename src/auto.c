@@ -26,7 +26,7 @@
  * so, the robot will await a switch to another mode or disable/enable cycle.
  */
 
-int autoState = 1;
+int autoState = 2;
 
 void autonomous() {
    // run different autonomous routines based on the valye of autoState; autoState
