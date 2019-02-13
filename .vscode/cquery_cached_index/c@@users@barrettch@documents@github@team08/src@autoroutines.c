@@ -37,14 +37,14 @@ void compAutoRedRight(){
     delay(2000);
     liftMove(0);
 
-    driveForDistancePID(3, 100);    // drive up on top platform
+    driveForDistancePID(4, 85);    // drive up on top platform
 
     delay(750);                     //bring arm back down
     liftMove(-75);
     delay(3500);
     liftMove(0);
 
-    delay(750);
+    delay(10000);
     pivotTurn(1, 90, 720);        //Victory Lap
 
 
