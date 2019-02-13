@@ -15,8 +15,43 @@ void compAutoRedRight(){
   // All the veraious autonomous commands for the Competition, Red Sqaure
   // Right position go here.  THen this function is called in auto.c the autonomous()
   // function based on some selector input.
-  pivotTurn(0, 40, 90);            // turn at seed 30 for 90 degree angle right turn
-  driveForDistancePID(30, 60);     // for 10 meter = 394" at speed 60
+    pivotTurn(0, 37, 75);            // turn at seed 30 for 90 degree angle right turn
+    driveForDistancePID(20, 60);     // for 10 meter = 394" at speed 60
+    pivotTurn(1, 37, 90);            // turn at seed 30 for 90 degree angle left turn
+    driveForDistancePID(40, 100);
+
+    liftMove(75);
+    delay(3500);
+    liftMove(0);
+
+    driveForDistancePID(25, 100);   // on first platform
+
+    liftMove(-75);                  //bring arm back forward
+    delay(1500);
+    liftMove(0);
+
+    delay(750);
+    driveForDistancePID(20, 100);   // front wheels on the top platform
+
+    liftMove(75);                   // hoist back up
+    delay(2000);
+    liftMove(0);
+
+    driveForDistancePID(3, 100);    // drive up on top platform
+
+    delay(750);                     //bring arm back down
+    liftMove(-75);
+    delay(3500);
+    liftMove(0);
+
+    delay(750);
+    pivotTurn(1, 90, 720);        //Victory Lap
+
+
+
+   // angle = ticks/degree for potentiometer move
+   // get current potetniometer value
+
 
 }
 

@@ -55,11 +55,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/manipulator.c.o",
-            "src\\manipulator.c"
+            "bin/chassis.c.o",
+            "src\\chassis.c"
         ],
         "directory": "C:\\Users\\BarrettCh\\Documents\\GitHub\\Team08",
-        "file": "src\\manipulator.c"
+        "file": "src\\chassis.c"
     },
     {
         "arguments": [
@@ -117,11 +117,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/chassis.c.o",
-            "src\\chassis.c"
+            "bin/autoroutines.c.o",
+            "src\\autoroutines.c"
         ],
         "directory": "C:\\Users\\BarrettCh\\Documents\\GitHub\\Team08",
-        "file": "src\\chassis.c"
+        "file": "src\\autoroutines.c"
     },
     {
         "arguments": [
@@ -148,11 +148,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/autoroutines.c.o",
-            "src\\autoroutines.c"
+            "bin/auto.c.o",
+            "src\\auto.c"
         ],
         "directory": "C:\\Users\\BarrettCh\\Documents\\GitHub\\Team08",
-        "file": "src\\autoroutines.c"
+        "file": "src\\auto.c"
     },
     {
         "arguments": [
@@ -210,11 +210,11 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/intake.c.o",
-            "src\\intake.c"
+            "bin/manipulator.c.o",
+            "src\\manipulator.c"
         ],
         "directory": "C:\\Users\\BarrettCh\\Documents\\GitHub\\Team08",
-        "file": "src\\intake.c"
+        "file": "src\\manipulator.c"
     },
     {
         "arguments": [
@@ -272,10 +272,10 @@
             "-fdiagnostics-color",
             "-std=gnu99",
             "-o",
-            "bin/auto.c.o",
-            "src\\auto.c"
+            "bin/intake.c.o",
+            "src\\intake.c"
         ],
         "directory": "C:\\Users\\BarrettCh\\Documents\\GitHub\\Team08",
-        "file": "src\\auto.c"
+        "file": "src\\intake.c"
     }
 ]
