@@ -1,6 +1,7 @@
 #include "main.h"    // includes API.h and other headers
 #include "chassis.h" // ensures that the corresponding header file (chassis.h) is included
 #include "portdef.h" // All port defintions on the cortex need to be included
+#include "math.h"    // included for driveForDistancePID function
 
 // Place all chassis specific functions here, forexample
 // void driveForDistancePD(int speed, int distance) {}
@@ -102,6 +103,8 @@ void driveForDistancePID(int distance, int speed) {
   float motorDegree = (distance / wheelCircum) * 360;  // cast into full degrees
 
   if(DEBUG_ON) {
+    printf("DIStance: %d ", distance);
+    printf(" Speed: %d ", speed);
     printf("Dist: %1.2f \n", motorDegree);
     wait(200);                        // Let terminal catch up
   }
@@ -118,10 +121,23 @@ void driveForDistancePID(int distance, int speed) {
   int error = 0;
   int kp = 5;                       // can be tuned to help zig-zag and accuracy, be careful!
 
+  // We need to account for direction - this means speed values need to be
+  // flipped if we drive backawards i.e. when we get a negative Distance
+  if(distance < 0 ) {
+    // we are driving backwards - so we need to flip speed
+    masterPower = masterPower * -1;
+    slavePower = slavePower * -1;
+  }
+  if(DEBUG_ON){
+    printf("Master Power: %d", masterPower);
+    printf(" SlavePower: %d \n", slavePower);
+  }
+
+
   encoderReset(encoderLM);
   encoderReset(encoderRM);
 
-  while(abs(totalTicks) < motorDegree)
+  while(abs(totalTicks) < fabs(motorDegree))
   {
     //Set the motor powers to their respective variables.
     motorSet(LEFT_M_FRONT, -masterPower);
@@ -147,7 +163,8 @@ void driveForDistancePID(int distance, int speed) {
     }
 
     //Add this iteration's encoder values to totalTicks.
-    totalTicks+= encoderGet(encoderLM);
+    // we are always doing 'positive travel distance compare'
+    totalTicks+= abs(encoderGet(encoderLM));
     if(DEBUG_ON) {
       printf("error: %d", error);
       printf(" slavePower: %d", slavePower);
